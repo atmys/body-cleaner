@@ -18,11 +18,11 @@ npm i --save body-cleaner
 ### API
 
 #### `object(unsafe)`
-  - returns `safe <Object>`
+- returns `safe <Object>`
 #### `string(unsafe)`
-  - returns `safe <String>`
+- returns `safe <String>`
 #### `boolean(unsafe)`
-  - returns `safe <Boolean>`
+- returns `safe <Boolean>`
 
 ### Usage
 
