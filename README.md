@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/atmys/body-cleaner.svg?branch=master)](https://travis-ci.org/atmys/body-cleaner)
 [![Coverage Status](https://coveralls.io/repos/github/atmys/body-cleaner/badge.svg)](https://coveralls.io/github/atmys/body-cleaner)
 [![Known Vulnerabilities](https://snyk.io/test/github/atmys/body-cleaner/badge.svg?targetFile=package.json)](https://snyk.io/test/github/atmys/body-cleaner?targetFile=package.json)
-[![codebeat badge](https://codebeat.co/badges/1165b188-dffa-419d-b8d8-5aa2c07e7170)](https://codebeat.co/projects/github-com-atmys-body-cleaner-master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/462676090fab4f61a34e1152527b9fd1)](https://www.codacy.com/app/atmys/body-cleaner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=atmys/body-cleaner&amp;utm_campaign=Badge_Grade)
 
 Very simple sanitizer to clean client-submitted data before you deal with it server-side. It iterates through objects & arrays to remove html & script tags, $ keys & everything that is not a string, a number, a date or a boolean.
 
@@ -11,18 +11,18 @@ Very simple sanitizer to clean client-submitted data before you deal with it ser
 
 ### Install
 
-```
+```console
 npm i --save body-cleaner
 ```
 
 ### API
 
 #### `object(unsafe)`
-- returns `safe <Object>`
+  - returns `safe <Object>`
 #### `string(unsafe)`
-- returns `safe <String>`
+  - returns `safe <String>`
 #### `boolean(unsafe)`
-- returns `safe <Boolean>`
+  - returns `safe <Boolean>`
 
 ### Usage
 
