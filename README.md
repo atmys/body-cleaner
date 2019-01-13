@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/atmys/body-cleaner.svg?branch=master)](https://travis-ci.org/atmys/body-cleaner)
 [![Coverage Status](https://coveralls.io/repos/github/atmys/body-cleaner/badge.svg)](https://coveralls.io/github/atmys/body-cleaner)
 [![Known Vulnerabilities](https://snyk.io/test/github/atmys/body-cleaner/badge.svg?targetFile=package.json)](https://snyk.io/test/github/atmys/body-cleaner?targetFile=package.json)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/462676090fab4f61a34e1152527b9fd1)](https://www.codacy.com/app/atmys/body-cleaner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=atmys/body-cleaner&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/atmys/body-cleaner/badge)](https://www.codefactor.io/repository/github/atmys/body-cleaner)
 
 Very simple sanitizer to clean client-submitted data before you deal with it server-side. It iterates through objects & arrays to remove html & script tags, $ keys & everything that is not a string, a number, a date or a boolean.
 
