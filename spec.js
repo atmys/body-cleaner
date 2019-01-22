@@ -45,13 +45,15 @@ describe('Clean', () => {
       };
       const diryObj = {
         $p: 'p',
-        err: new Error()
+        err: new Error(),
+        clean: '<p></p>',
+        ignore: '<p></p>'
       }
       expect(object('## Startup & Coworking')).toBe('## Startup & Coworking');
       expect(object('<script>alert(5)</script>bla')).toBe('bla');
       expect(object(['<script>alert(5)</script>bla'])).toEqual(['bla']);
       expect(object(cleanObj)).toEqual(cleanObj);
-      expect(object(diryObj)).toEqual({ err: undefined });
+      expect(object(diryObj, { ignoreKeys: ['ignore'] })).toEqual({ err: undefined, clean: '', ignore: '<p></p>' });
     });
   });
 

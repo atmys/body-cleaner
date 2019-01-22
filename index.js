@@ -19,7 +19,7 @@ const string = function (dirty) {
     return clean;
 }
 
-const object = function (dirty) {
+const object = function (dirty, { ignoreKeys = [] } = {}) {
     if (!dirty) {
         return null;
     }
@@ -40,9 +40,9 @@ const object = function (dirty) {
         for (let i = 0; i < keys.length; i++) {
             const key = keys[i];
 
-            if ((/^\$/).test(key)) {
+            if (!ignoreKeys.includes(key) && (/^\$/).test(key)) {
                 delete dirty[key];
-            } else {
+            } else if (!ignoreKeys.includes(key)) {
                 dirty[key] = object(dirty[key]);
             }
         }

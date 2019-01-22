@@ -17,7 +17,9 @@ npm i --save body-cleaner
 
 ### API
 
-#### `object(unsafe)`
+#### `object(unsafe, options)`
+- `options <Object>` :
+  - `ignoreKeys <Array>` : array of keys to ignore. Will ignore theses keys on all level.
 - returns `safe <Object>`
 #### `string(unsafe)`
 - returns `safe <String>`
