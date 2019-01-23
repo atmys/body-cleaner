@@ -19,31 +19,30 @@ const string = function (dirty) {
     return clean;
 }
 
-const object = function (dirty, { ignoreKeys = [] } = {}) {
+const object = function (dirty, options = {}) {
+
+    const ignoreKeys = options.ignoreKeys || [];
+
     if (!dirty) {
         return null;
     }
     const constructor = dirty.constructor;
     const keys = Object.keys(dirty);
-
     if (constructor === String) {
         dirty = string(dirty);
-
     } else if (constructor === Array) {
 
         for (let i = 0; i < dirty.length; i++) {
-            dirty[i] = object(dirty[i]);
+            dirty[i] = object(dirty[i], options);
         }
-
     } else if (constructor === Object && keys && keys.length) {
 
         for (let i = 0; i < keys.length; i++) {
             const key = keys[i];
-
             if (!ignoreKeys.includes(key) && (/^\$/).test(key)) {
                 delete dirty[key];
             } else if (!ignoreKeys.includes(key)) {
-                dirty[key] = object(dirty[key]);
+                dirty[key] = object(dirty[key], options);
             }
         }
 
