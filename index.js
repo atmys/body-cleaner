@@ -23,7 +23,7 @@ const object = function (dirty, options = {}) {
 
     const ignoreKeys = options.ignoreKeys || [];
 
-    if (dirty === undefined) {
+    if (dirty === undefined && dirty === null) {
         return null;
     }
     const constructor = dirty.constructor;
